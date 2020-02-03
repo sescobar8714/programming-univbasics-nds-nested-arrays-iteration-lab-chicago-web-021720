@@ -34,14 +34,17 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
-  t_even_pairs = []
-  row_index = 0
-  while row_index < src.count
-    EvenPairs = src[row_index]
-    if (EvenPairs[0], EvenPairs[1])%2
-      [EvenPairs[0] + EvenPairs[1]]
-    else
-      row_index += 1
-end
-end
+
+  SOURCE_INDEX = 0
+  TOTAL = 0
+  while SOURCE_INDEX < src.count
+    current_arr = src[SOURCE_INDEX]
+    first_el_even = current_arr[0] % 2 == 0
+    second_el_even = current_arr[1] % 2 == 0
+    if first_el_even && second_el_even
+       TOTAL += current_arr[0] + current_arr[1]
+    end
+      SOURCE_INDEX += 1
+    end
+    return TOTAL
 end
