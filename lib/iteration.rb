@@ -35,16 +35,16 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
 
-  SOURCE_INDEX = 0
-  TOTAL = 0
-  while SOURCE_INDEX < src.count
-    current_arr = src[SOURCE_INDEX]
+  $source_index = 0
+  $total = 0
+  while $source_index < src.count
+    current_arr = src[$source_index]
     first_el_even = current_arr[0] % 2 == 0
     second_el_even = current_arr[1] % 2 == 0
     if first_el_even && second_el_even
-       TOTAL += current_arr[0] + current_arr[1]
+       $total += current_arr[0] + current_arr[1]
     end
-      SOURCE_INDEX += 1
+      $source_index += 1
     end
-    return TOTAL
+    return $total
 end
